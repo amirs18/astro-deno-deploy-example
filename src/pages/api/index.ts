@@ -1,6 +1,6 @@
 import type { APIRoute } from "astro";
-import { toInteger } from "lodash"
+import { isNumber } from "remeda"
 export const POST: APIRoute = () => {
-    const int = toInteger("1")
+    const int = isNumber("1")
     return new Response(`hello world ${int} `)
 }
